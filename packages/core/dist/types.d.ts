@@ -1,0 +1,23 @@
+import { z } from 'zod';
+export type GuidelineId = `EIA748-${number}`;
+export type AttributeId = `IP2M-A${number}`;
+export type FactorId = `IP2M-F${number}`;
+export declare const EvidencePointerSchema: any;
+export type EvidencePointer = z.infer<typeof EvidencePointerSchema>;
+export declare const FindingSchema: any;
+export type Finding = z.infer<typeof FindingSchema>;
+export declare const ScoreCardEntrySchema: any;
+export type ScoreCardEntry = z.infer<typeof ScoreCardEntrySchema>;
+export declare const ActionItemSchema: any;
+export type ActionItem = z.infer<typeof ActionItemSchema>;
+export declare const AssessmentStateSchema: any;
+export type AssessmentState = z.infer<typeof AssessmentStateSchema>;
+export declare const AssessmentSchema: any;
+export type Assessment = z.infer<typeof AssessmentSchema>;
+export declare const UserRoleSchema: any;
+export type UserRole = z.infer<typeof UserRoleSchema>;
+export declare const UserSchema: any;
+export type User = z.infer<typeof UserSchema>;
+export declare const AuditLogSchema: any;
+export type AuditLog = z.infer<typeof AuditLogSchema>;
+//# sourceMappingURL=types.d.ts.map

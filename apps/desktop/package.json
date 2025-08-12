@@ -1,0 +1,70 @@
+﻿{
+  "name": "desktop",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/main.js",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "concurrently \"tsc --watch\" \"vite\" \"electron dist/main.js\"",
+    "start": "electron dist/main.js",
+    "test": "vitest",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "package": "electron-builder",
+    "package:win": "electron-builder --win",
+    "package:mac": "electron-builder --mac",
+    "package:linux": "electron-builder --linux"
+  },
+  "dependencies": {
+    "@ip2m/core": "workspace:*",
+    "@ip2m/ui": "workspace:*",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^6.20.0",
+    "zustand": "^4.4.0",
+    "axios": "^1.6.0",
+    "@tanstack/react-query": "^5.8.0",
+    "react-hook-form": "^7.48.0",
+    "@hookform/resolvers": "^3.3.0",
+    "zod": "^3.22.0",
+    "lucide-react": "^0.294.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.8.0",
+    "concurrently": "^8.2.0",
+    "vite": "^7.1.2",
+    "typescript": "~5.8.3",
+    "vitest": "^2.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  },
+  "build": {
+    "appId": "com.ip2m.metrr-copilot",
+    "productName": "IP2M METRR Copilot",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}

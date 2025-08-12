@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ip2m/core": ["./packages/core/src"],
+      "@ip2m/rag": ["./packages/rag/src"],
+      "@ip2m/policy-graph": ["./packages/policy-graph/src"],
+      "@ip2m/reporters": ["./packages/reporters/src"],
+      "@ip2m/ui": ["./packages/ui/src"]
+    }
+  },
+  "include": [],
+  "references": [
+    { "path": "./apps/desktop" },
+    { "path": "./apps/api" },
+    { "path": "./apps/indexer" },
+    { "path": "./packages/core" },
+    { "path": "./packages/rag" },
+    { "path": "./packages/policy-graph" },
+    { "path": "./packages/reporters" },
+    { "path": "./packages/ui" }
+  ]
+}

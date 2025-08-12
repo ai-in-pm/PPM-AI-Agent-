@@ -1,0 +1,20 @@
+﻿{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": false,
+    "sourceMap": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dist", "dist-electron", "node_modules", "**/*.test.ts", "**/*.test.tsx"],
+  "references": [
+    { "path": "../../packages/core" },
+    { "path": "../../packages/ui" }
+  ]
+}
